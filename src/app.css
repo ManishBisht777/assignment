@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
-  @apply text-pink-300;
+body {
+  background: #241f31;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.padding {
+  @apply py-1 px-1 md:py-3 md:px-4 rounded-sm;
 }
