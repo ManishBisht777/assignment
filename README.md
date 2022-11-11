@@ -19,7 +19,7 @@ A app for searching github profiles including followers, repo count, contributio
 
 ## 🛠️ Installation Steps
 
-1. [Fork](https://github.com/ManishBisht777/assignment/
+1. [Fork](https://github.com/ManishBisht777/assignment/)
 
 2. Clone the project, you can use the following command:
 
