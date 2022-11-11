@@ -48,12 +48,12 @@ const App = () => {
   // workaround for long api calls result
   // in late data fetch hence component not rerendering
   // To be optimised
-  // useEffect(() => {
-  //   const interval = setInterval(() => setTime(Date.now()), 1000);
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   // fetches usersList
   const getUser = async () => {
@@ -83,8 +83,6 @@ const App = () => {
     setUser(sortUser(sortQuery, users));
   };
 
-  console.log(users);
-
   return (
     <main className=" min-w-full min-h-full flex flex-col text-white capitalize ">
       <p className="hidden">{Date(time)}</p>
@@ -111,7 +109,7 @@ const App = () => {
               <input
                 type="date"
                 placeholder="From"
-                className="md:text-lg lg:text-xl border rounded-sm p-1 md:p-3 bg-transparent"
+                className="md:text-lg text-white lg:text-xl border rounded-sm p-1 md:p-3 bg-transparent"
                 onChange={(e) => {
                   if (!e.target.value) return;
                   setFromDate(new Date(e.target.value).toISOString());
@@ -123,7 +121,7 @@ const App = () => {
               <input
                 type="date"
                 placeholder="to"
-                className="md:text-lg lg:text-xl border rounded-sm p-1 md:p-3 bg-transparent"
+                className="md:text-lg text-white lg:text-xl border rounded-sm p-1 md:p-3 bg-transparent"
                 onChange={(e) => {
                   if (!e.target.value) return;
                   setToDate(new Date(e.target.value).toISOString());

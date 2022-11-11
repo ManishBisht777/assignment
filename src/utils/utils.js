@@ -92,7 +92,7 @@ export const getUser = async (username) => {
 export const fetchUsersList = async (queryname) => {
   try {
     const response = await fetch(
-      `https://api.github.com/search/users?q=${queryname}&in:user&per_page=20`,
+      `https://api.github.com/search/users?q=${queryname}&in:user&per_page=5`,
       {
         headers: {
           Authorization: process.env.REACT_APP_GITHUB_TOKEN,
